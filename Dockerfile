@@ -1,0 +1,13 @@
+FROM mysql:latest
+
+ENV MYSQL_ROOT_PASSWORD 123
+
+ENV MYSQL_DATABASE myDB
+
+ENV MYSQL_USER payam
+
+ENV MYSQL_PASSWORD 12345
+
+ADD myDB.sql /docker-entrypoint-initdb.d
+
+EXPOSE 3306
